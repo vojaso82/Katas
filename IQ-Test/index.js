@@ -24,3 +24,14 @@ function iqTest(numbers){
     return oddNum[0] + 1;
     return evenNum[0] + 1;
   }
+
+  //EXPECTED
+
+  // describe("Tests", () => {
+  //   it("test", () => {
+  // Test.assertEquals(iqTest("2 4 7 8 10"),3);
+  // Test.assertEquals(iqTest("1 2 2"), 1);
+  
+  //   });
+  // });
+  
