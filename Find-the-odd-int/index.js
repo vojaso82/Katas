@@ -10,3 +10,10 @@ function findOdd(A) {
    }
 
 //    The bitwise XOR operator (^) returns a 1 in each bit position for which the corresponding bits of either but not both operands are 1s. 
+
+
+// Another solution
+
+function findOdd(arr) {
+    return arr.find((item, index) => arr.filter(el => el == item).length % 2)
+  }
