@@ -8,3 +8,5 @@ function findOdd(A) {
        return c ^ v;
      }, 0);
    }
+
+//    The bitwise XOR operator (^) returns a 1 in each bit position for which the corresponding bits of either but not both operands are 1s. 
