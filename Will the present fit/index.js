@@ -14,3 +14,14 @@ function willFit(present, box){
     return sortedBox.every((element, index) => element - 1 > sortedPresent[index])
   
   }
+
+  function willFit(present, box){
+    let sortedBox = box.sort((a, b) => a - b);
+    console.log(sortedBox)
+    let sortedPresent = present.sort((a, b) => a - b);
+    console.log(sortedPresent)
+    return !sortedBox.some((element, index) =>{
+      console.log((element-1),sortedPresent[index], [index])
+      return element-1  <= sortedPresent[index]
+    });
+  }
