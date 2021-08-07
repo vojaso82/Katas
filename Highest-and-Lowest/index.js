@@ -20,3 +20,12 @@ function highAndLow(numbers){
     //console.log(numbers.split(" ").length)
      }
     }
+
+    function highAndLow(numbers) {
+        numbers = numbers.split(' ').map(Number)
+        
+        let min = Math.min.apply(null, numbers)
+        let max = Math.max.apply(null, numbers)
+        
+        return max + ' ' + min
+      }
