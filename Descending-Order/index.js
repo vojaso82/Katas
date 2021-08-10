@@ -6,3 +6,11 @@
 // Input: 145263 Output: 654321
 
 // Input: 123456789 Output: 987654321
+
+
+function descendingOrder(n){
+    let toString = n.toString().split("");
+    // console.log(toString)
+    let newNum = Number(toString.sort((a,b) => b-a).join(""))
+    return newNum
+  }
