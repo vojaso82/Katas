@@ -9,3 +9,21 @@
 //                         // 1*2*6 = 12, and finally 1*2 = 2
                   
 //  persistence(4) === 0 // because 4 is already a one-digit number
+
+
+function persistence(num) {
+    let count = 0;
+       
+       function multiply(n){
+        return n.reduce((a,b) => a*b);
+       }
+      //  let toString = num.toString().split("") 
+    
+       while(num.toString().length > 1) {
+               num = num.toString().split("");
+               console.log(num)
+               num = multiply(num);
+               count++;
+            }
+            return count;
+        }
