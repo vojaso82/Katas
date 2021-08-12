@@ -8,3 +8,17 @@
 
 // [ 3, 4, 5, 6, 5, 6, 7, 7, 8, 9 ]
 
+
+function digits(num){
+    let numArray = num.toString().split('');
+      let sumArray = [];
+      
+      for (let i = 0; i < numArray.length; i++) {
+        for (let j = i+1; j < numArray.length; j++) {
+          let sum;
+          sum = Number(numArray[i]) + Number(numArray[j]);
+          sumArray.push(sum);
+        }
+      } 
+      return sumArray; 
+    }
