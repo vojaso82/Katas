@@ -5,3 +5,13 @@
 
 // The returned format must be correct in order to complete this challenge.
 // Don't forget the space after the closing parentheses!
+
+function createPhoneNumber(numbers){
+    numbers.unshift("(")
+    // console.log(numbers)
+    numbers.splice(4, 0, ")", " ");
+    // console.log(numbers)
+    numbers.splice(9, 0, "-");
+    //  console.log(numbers)
+    return numbers.join("");
+  }
