@@ -6,6 +6,8 @@
 // The returned format must be correct in order to complete this challenge.
 // Don't forget the space after the closing parentheses!
 
+// SOLUTION1
+
 function createPhoneNumber(numbers){
     numbers.unshift("(")
     // console.log(numbers)
@@ -14,4 +16,19 @@ function createPhoneNumber(numbers){
     numbers.splice(9, 0, "-");
     //  console.log(numbers)
     return numbers.join("");
+  }
+
+
+//   SOLUTION2
+  function createPhoneNumber(numbers){
+    let cellNumber = "(xxx) xxx-xxxx";
+    
+    for(let i = 0; i < numbers.length; i++)
+    // console.log(i)
+    {
+      cellNumber = cellNumber.replace('x', numbers[i]);
+      // console.log(cellNumber)
+    }
+    
+    return cellNumber;
   }
