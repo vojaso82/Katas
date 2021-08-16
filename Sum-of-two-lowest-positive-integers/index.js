@@ -7,7 +7,7 @@
 
 // Solution1
 function sumTwoSmallestNumbers(numbers) {  
-    let sum = 0;
+    // let sum = 0;
     let sortedArr = numbers.sort((a,b) => a-b)
     let firstTwo = sortedArr.splice(0,2)
     return firstTwo.reduce((a,b) => a+b)
@@ -18,4 +18,3 @@ function sumTwoSmallestNumbers(numbers){
     let sortedNumbers = numbers.sort((a,b) => a-b)
     return numbers[0] + numbers[1];
   };
-  
