@@ -11,3 +11,13 @@
 // maskify("Skippy")                                   == "##ippy"
 // maskify("Nananananananananananananananana Batman!") == "####################################man!"
 
+function maskify(cc) {
+    let string1 = cc.slice(Math.max(cc.length -4, 1))
+    let string2 = cc.slice(0, cc.length-4).split("").map(each => each = "#").join("")
+    if(cc.length <= 4 ){
+      return cc
+    } else{
+      return string2+string1
+    }
+    }
+    
