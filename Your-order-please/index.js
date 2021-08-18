@@ -9,3 +9,16 @@
 // "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
 // ""  -->  ""
 
+function order(words){
+    let numbers = words.match(/[1-9]/g)
+    let wordArr = words.split(" ")
+    let finalArr = [];
+   
+    if(words.length === 0) return words;
+   
+    for (let i=1;i<=numbers.length;i++){
+       let index = numbers.indexOf(i.toString())
+       finalArr.push(wordArr[index])
+     }
+     return finalArr.join(" ")
+   }
