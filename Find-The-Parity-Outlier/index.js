@@ -10,3 +10,18 @@
 
 
 
+function findOutlier(integers){
+    // let evenArr = integers.filter((ele) => ele % 2 === 0)
+    // let oddArr = integers.filter((ele) => ele % 2 !== 0)
+    // let evenNum = integers.find((ele) => ele % 2 === 0)
+    // console.log(filteredEvenArr)
+    // let oddNum = integers.find((ele) => ele % 2 !== 0)
+    
+    let filteredArr = integers.filter((ele) => ele % 2 === 0)
+    if(filteredArr.length === integers.length-1){
+      return integers.find((ele) => ele % 2 !== 0)
+    }else{
+      return integers.find((ele) => ele % 2 === 0)
+    }
+    
+    }
