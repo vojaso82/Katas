@@ -15,3 +15,8 @@
 // (the only-positive or only-negative integer may appear more than once)
 
 // Good luck!
+
+function solve(arr){
+    let matchingNum = arr.find(element => !arr.includes(-element));
+     return matchingNum
+  };
