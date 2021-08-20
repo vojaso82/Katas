@@ -5,7 +5,7 @@
 // [10, 7, 16], [13, 32, 10] --> true, box is bigger than present
 // [5, 7, 9], [9, 5, 7]      --> false, present and box are same size
 // [17, 22, 10], [5, 5, 10]) --> false, box is too small
-
+//Solution1
 function willFit(present, box){
     let sortedBox = box.sort((a, b) => a - b);
     console.log(sortedBox)
@@ -15,6 +15,7 @@ function willFit(present, box){
   
   }
 
+  //Solution2
   function willFit(present, box){
     let sortedBox = box.sort((a, b) => a - b);
     console.log(sortedBox)
@@ -25,3 +26,4 @@ function willFit(present, box){
       return element-1  <= sortedPresent[index]
     });
   }
+
