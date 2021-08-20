@@ -4,3 +4,22 @@
 // uniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
 // uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
 // uniqueInOrder([1,2,2,3,3])       == [1,2,3]
+
+// let newString = '';
+    // let newArray = [];
+    //  console.log(typeof iterable)
+    if(typeof iterable === 'string'){
+        let arr1 = iterable.split("")
+        let filteredArr = arr1.filter((ele,index,arr) => {
+          // console.log(ele, index)
+          return arr[index] !== arr[index+1];
+          // console.log(filteredArr)
+        })
+        return filteredArr
+       } else if(typeof iterable === 'object'){
+        let filteredArr2 = iterable.filter((ele,index,arr) => {
+         return arr[index] !== arr[index+1];
+       
+       })
+       return filteredArr2
+      }
