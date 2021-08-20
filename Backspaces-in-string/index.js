@@ -8,3 +8,14 @@
 // "#######"       ==>  ""
 // ""              ==>  ""
 
+function cleanString(s) {
+    let result = []
+    for (let element of s) {
+      if (element === "#") {
+        result.pop()
+      } else {
+        result.push(element)
+      }
+    }
+    return result.join("")
+  };
