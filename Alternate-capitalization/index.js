@@ -3,7 +3,7 @@
 // For example, capitalize("abcdef") = ['AbCdEf', 'aBcDeF']. See test cases for more examples.
 
 // The input will be a lowercase string with no spaces.
-
+// dakjlfdsjl
 // Good luck!
 
 function capitalize(s){
