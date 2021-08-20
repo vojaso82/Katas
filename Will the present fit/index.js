@@ -38,3 +38,10 @@ function willFit(present, box){
      return element-1  <= sortedPresent[index]
    });
  }
+
+ //Sol4
+ function willFit(present, box){
+  let sortedBoxs = box.sort((a, b) => a - b);
+  let sortedPesents = present.sort((a, b) => a - b);
+  return !sortedBoxs.some((element, index) => element - 1 <= sortedPesents[index]);
+}
