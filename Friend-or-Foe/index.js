@@ -9,3 +9,11 @@
 // friend ["Ryan", "Kieran", "Mark"] `shouldBe` ["Ryan", "Mark"]
 
 // Note: keep the original order of the names in the output.
+
+function friend(friends){
+    let filteredNames = friends.filter((element)=>{
+      return element.length === 4
+    });
+  
+    return filteredNames
+    }
