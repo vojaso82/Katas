@@ -19,3 +19,10 @@
   function songDecoder(song){
     return song.split('WUB').filter((ele) => ele.length > 0).join(' ')
     }
+
+
+//Solution2
+
+function songDecoder(str){
+  let newArr = str.split("WUB").filter(ele => ele !== '').join(" ").trim()
+  return newArr
