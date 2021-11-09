@@ -16,17 +16,38 @@
 // songDecoder("WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB")
   // =>  WE ARE THE CHAMPIONS MY FRIEND
 
-  function songDecoder(song){
-    return song.split('WUB').filter((ele) => ele.length > 0).join(' ')
-    }
+//SOLUTION1
+  function songDecoder(song) {
+    return song
+      .split("WUB")
+      .filter((ele) => ele.length > 0)
+      .join(" ");
+  }
 
 
 //Solution2
 
-function songDecoder(str){
-  let newArr = str.split("WUB").filter(ele => ele !== '').join(" ").trim()
-  return newArr
+function songDecoder(str) {
+  let newArr = str
+    .split("WUB")
+    .filter((ele) => ele !== "")
+    .join(" ")
+    .trim();
+  return newArr;
 }
 
+//SOLUTION3
 
-//TEST
+function songDecoder(song) {
+  let str = "";
+  for (let i = 0; i < song.length; i++) {
+    if (
+      (song[i] == "W" && song[i + 1] == "U" && song[i + 2] == "B") ||
+      (song[i - 1] == "W" && song[i] == "U" && song[i + 1] == "B") ||
+      (song[i - 2] == "W" && song[i - 1] == "U" && song[i] == "B")
+    )
+      str += str[str.length - 1] !== " " ? " " : "";
+    else str += song[i];
+  }
+  return str.trim();
+}
