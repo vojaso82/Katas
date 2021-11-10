@@ -9,7 +9,14 @@
 
 
 function pluck(objs, name) {
+  return objs.map((ele) => ele[name]);
+}
 
-    return objs.map(ele => ele[name]);
-    
-    }
+//SOLUTION2
+
+
+function pluck(objs, name) {
+  return objs.map(function (obj) {
+    return obj[name];
+  });
+}
