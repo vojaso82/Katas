@@ -13,14 +13,15 @@
 // More examples in test cases. Good luck!
 
 
+
+//SOLUTION1
 function solve(s) {
     return 'abcdefghijklmnopqrstuvwxyz'.includes([...s].sort().join(''));
   }
 
+  
 
 //SOLUTION2
-
-
 function solve(s){
   s=s.split("").sort();
   for (var i=1; i<s.length; ++i)
@@ -28,3 +29,4 @@ function solve(s){
       return false
   return true
 }
+
