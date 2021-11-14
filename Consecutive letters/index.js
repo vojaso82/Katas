@@ -31,3 +31,11 @@ function solve(s){
 }
 
 
+//TESTING TESTING
+function solve(s){
+  s=s.split("").sort();
+  for (var i=1; i<s.length; ++i)
+    if (s[i-1].charCodeAt()!=s[i].charCodeAt()-1)
+      return false
+  return true
+}
