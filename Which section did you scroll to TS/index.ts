@@ -13,10 +13,23 @@
 
 // Given the scrollY integer (always non-negative) and an array of non-negative integers (with at least one element), calculate the index (starting at 0) or -1 if scrollY falls beyond last section (indication of an error).
 
-
+//SOLUTION1
 function getSectionIdFromScroll(scrollY,sizes){
     let i=0;
     while (scrollY>=0)
       scrollY-=sizes[i++]
     return scrollY<0?--i:-1
+  }
+
+
+  //SOLUTION2
+
+  function getSectionIdFromScroll1(scrollY,sizes){
+    let total = 0;
+    for (let i = 0; i < sizes.length; i++) {
+      total = total + sizes[i];
+      if (scrollY < total) {
+        return i;
+      }
+    }
   }
