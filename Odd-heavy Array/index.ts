@@ -14,3 +14,5 @@ function isOddHeavy(n) {
     if (!odd.length) return false;
     return even.every(v => v < odd[0]);
 }
+
+///////SOLUTION2
